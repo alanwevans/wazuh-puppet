@@ -3,8 +3,8 @@
     <alerts_log>yes</alerts_log>
     <logall>no</logall>
     <logall_json>no</logall_json>
-  <%- if @ossec_emailnotification -%>
-    <email_notification>no</email_notification>
+  <%- if @ossec_emailnotification == 'yes' -%>
+    <email_notification>yes</email_notification>
     <%- @ossec_emailto.each do |emailto| -%>
     <email_to><%= emailto %></email_to>
     <%- end -%>

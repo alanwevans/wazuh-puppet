@@ -279,7 +279,7 @@ class wazuh::manager (
 
   # This allows arrays of integers, sadly
   # (commented due to stdlib version requirement)
-  if ($ossec_emailnotification == true) {
+  if ($ossec_emailnotification == 'yes') {
     if $ossec_smtp_server == undef {
       fail('$ossec_emailnotification is enabled but $smtp_server was not set')
     }
